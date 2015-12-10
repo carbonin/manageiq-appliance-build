@@ -11,7 +11,9 @@ cdrom
 
 lang en_US.UTF-8
 keyboard us
-%include /tmp/miq-device-conf.ks
+#%include /tmp/miq-device-conf.ks
+network --device link --onboot yes --bootproto static --ip 192.168.1.20 --netmask 255.255.255.0 --gatway 192.168.1.1
+network --hostname somehost
 rootpw  --iscrypted $1$DZprqvCu$mhqFBjfLTH/PVvZIompVP/
 
 authconfig --enableshadow --passalgo=sha512
