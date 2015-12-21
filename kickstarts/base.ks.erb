@@ -63,8 +63,6 @@ $appliance_root/cfme-setup.sh
 
 <%= render_partial "post/systemd" %>
 
-<%= render_partial "post/db_init" %>
-
 # make sure we have the device name in all ifcfg-* files
 ls /etc/sysconfig/network-scripts/ifcfg-* | while read FILE
 do
